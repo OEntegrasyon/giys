@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anasayfa on GİYS Projesi</title>
+    <link>https://oentegrasyon.github.io/giys/anasayfa/</link>
+    <description>Recent content in Anasayfa on GİYS Projesi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Jan 2022 10:50:26 +0300</lastBuildDate><atom:link href="https://oentegrasyon.github.io/giys/anasayfa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giys Projesi</title>
+      <link>https://oentegrasyon.github.io/giys/anasayfa/Giys-Projesi/</link>
+      <pubDate>Wed, 19 Jan 2022 10:50:26 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/anasayfa/Giys-Projesi/</guid>
+      <description>Kişisel bir bilgisayarda güvenlik ayarları, kurulan yazılımlar, parola yönetimi, dosyaların yedeklenmesi gibi her türlü düzenleme, ayar ve kullanım durumları son kullanıcı tarafından belirlenebilir ve uygulanabilir. Ancak bir bilgisayar kurum içinde istemci olarak konumlandırıldığında başta güvenlik olmak üzere, kaynak yönetimi, verimlilik gibi parametreler ön planda olduğundan yönetim ve kontrol son kullanıcılara bırakılmamalıdır. İşletim sistemleri kamu ve özel kuruluşlarda kullanımının önündeki ciddi engellerden biri bu işletim sisteminin kurulu olduğu istemci makineleri yöneten ve kontrol eden etkin bir sistemin mevcut olmamasıdır.</description>
+    </item>
+    
+  </channel>
+</rss>

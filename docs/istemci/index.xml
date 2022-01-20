@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Istemci on GİYS Projesi</title>
+    <link>https://oentegrasyon.github.io/giys/istemci/</link>
+    <description>Recent content in Istemci on GİYS Projesi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Jan 2022 11:01:14 +0300</lastBuildDate><atom:link href="https://oentegrasyon.github.io/giys/istemci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>USB Kontrol</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/USB-Kontrol/</link>
+      <pubDate>Wed, 19 Jan 2022 11:01:14 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/USB-Kontrol/</guid>
+      <description>İstemci üzerinde ki usb portlarına erişim kontrolü bu sayfa üzerinden gerçekleştirilmektedir.
+ Yazıcı Web Kamera Usb Bellek  donanımları istemci üzerinden engellenir veya engel kaldırılmaktadır.</description>
+    </item>
+    
+    <item>
+      <title>Zamanlanmış İşler</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/Zamanlanm%C4%B1%C5%9F-%C4%B0%C5%9Fler/</link>
+      <pubDate>Wed, 19 Jan 2022 11:00:57 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/Zamanlanm%C4%B1%C5%9F-%C4%B0%C5%9Fler/</guid>
+      <description>İstemcinin crontab ayarları bu sayfa üzerinden yönetilebilmektedir. Kullanıcılar crontab yazım kurallarını bilmese dahi sayfa üzerindeki butonlar vasıtasıyla crontab kurallarını yazabilirler. Yazılan kurallar crontab dosyasının içerisine yazılmaktadır.</description>
+    </item>
+    
+    <item>
+      <title>Yedekleme</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/Yedekleme/</link>
+      <pubDate>Wed, 19 Jan 2022 10:54:24 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/Yedekleme/</guid>
+      <description>İstemci üzerinde bir dizinin uzak bir dosya sunucusuna veya kendi dizinine yedekleme işlemi bu sayfa üzerinden gerçekleştirilmektedir.</description>
+    </item>
+    
+    <item>
+      <title>Port Yöneticisi</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/Port-Y%C3%B6netici/</link>
+      <pubDate>Wed, 19 Jan 2022 10:53:40 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/Port-Y%C3%B6netici/</guid>
+      <description>İstemci üzerinde port yönetimi ve güvenlik duvarı ayarlarının yönetildiği sayfadır. İstemci üzerinde üzerinde bulunan kurallar bir tablo şeklinde görüntülenmektedir. Eklenecek yeni bir kural, kural ekleme butonu ile gerçekleştirilir.</description>
+    </item>
+    
+    <item>
+      <title>Servis Yöneticisi</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/Servis-Y%C3%B6netici/</link>
+      <pubDate>Wed, 19 Jan 2022 10:53:30 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/Servis-Y%C3%B6netici/</guid>
+      <description>İstemci üzerinde ki tüm servisler bu sayfa üzerinden kontrol edilmektedir. Tablo içerisinde belirtilen tüm servisleri;
+ Başlatma Durdurma Restart Başlangıçta Başlatma Başlangıçta Durdurma  işlemleri gerçekleştirilebilir.</description>
+    </item>
+    
+    <item>
+      <title>Paket Yöneticisi</title>
+      <link>https://oentegrasyon.github.io/giys/istemci/Paket-Y%C3%B6neticisi/</link>
+      <pubDate>Wed, 19 Jan 2022 10:52:59 +0300</pubDate>
+      
+      <guid>https://oentegrasyon.github.io/giys/istemci/Paket-Y%C3%B6neticisi/</guid>
+      <description>İstemcilere paket yükleme, kaldırma işlemlerinin gerçekleştirildiği sayfadır. Yüklenmek istenen paket ismi sisteme girildikten sonra, paket mevcut ise yükleme butonu çıkacaktır. Yüklü olan paketler tablo üzerinde görüntülenir ve kaldırma işlemi bu tablo üzerinden gerçekleştirilir.</description>
+    </item>
+    
+  </channel>
+</rss>
