@@ -4,8 +4,6 @@ date: 2022-01-19T10:50:26+03:00
 ---
 
 
-
-
 Kişisel bir bilgisayarda güvenlik ayarları, kurulan yazılımlar, parola yönetimi, dosyaların yedeklenmesi gibi her türlü düzenleme, ayar ve kullanım durumları son kullanıcı tarafından belirlenebilir ve uygulanabilir. Ancak bir bilgisayar kurum içinde istemci olarak konumlandırıldığında başta
 güvenlik olmak üzere, kaynak yönetimi, verimlilik gibi parametreler ön planda olduğundan yönetim ve kontrol son kullanıcılara bırakılmamalıdır.
 İşletim sistemleri kamu ve özel kuruluşlarda kullanımının önündeki ciddi engellerden biri bu işletim sisteminin kurulu olduğu istemci makineleri yöneten ve kontrol eden
@@ -27,6 +25,45 @@ Projemiz;
 sağlayacak yetkinlikleri ile kurumların Pardus göçünü kolaylaştırıp teşvik ederek
 yerli işletim sistemimizin yaygınlaştırılmasını ve milli ekonomiye büyük bir katma değer oluşturulmasını amaçlamaktadır. Projemizin yeteneklerinin
 yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli teknolojiler ve protokoller geliştirilmiştir.
+{{<mermaid align="left">}}
+sequenceDiagram
+    actor User
+    participant WebUI
+    participant TaskManager
+    participant AgentManager
+    participant MessageManager
+    participant RabbitMQ
+
+    User ->> WebUI: get_task_list()
+    WebUI ->> TaskManager : get_task_list()
+    TaskManager -->> WebUI: task_list
+    User ->> WebUI: get_agent_list()
+    WebUI ->> AgentManager : get_agent_list()
+    AgentManager -->> WebUI : agent_list
+
+    par 
+        User->>WebUI: select_task()
+    and 
+        User->>WebUI: select_agent()
+    and
+        User->>WebUI: select_task_type()
+    end
+    
+    WebUI ->> TaskManager : load_task(agent, task)
+    TaskManager ->> TaskManager: save_task(agent, task)
+    TaskManager ->> AgentManager: send_task_to_agent(agent, task)
+    AgentManager ->> MessageManager: send_task_message_to_message_broker(agent, task)
+    MessageManager ->> MessageManager : get_agent_queue(agent)
+    MessageManager ->> RabbitMQ :send_task_message_to_agent_queue(qgent_queue, task_message)
+    RabbitMQ -->> MessageManager : message_sent_result
+    MessageManager ->> MessageManager: create_event() listen_message_result_event
+    MessageManager -->> AgentManager :task_sent_result
+    AgentManager -->> TaskManager :task_sent_result
+    TaskManager ->> TaskManager :listen_task_result_event 
+    TaskManager ->> WebUI: task_result
+
+{{< /mermaid >}}
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
 **Yenilikçi Yönleri**
 
@@ -78,3 +115,6 @@ sequenceDiagram
     RabbitMQ -->>  MessageManager : message_sent_result
 
 {{< /mermaid >}}
+
+
+ <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>

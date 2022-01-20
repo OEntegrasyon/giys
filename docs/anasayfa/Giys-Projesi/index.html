@@ -146,7 +146,7 @@
         }
     },
     "url" : "https:\/\/oentegrasyon.github.io\/giys\/anasayfa\/Giys-Projesi\/",
-    "wordCount" : "405",
+    "wordCount" : "512",
     "genre" : [ ]
 }
 </script>
@@ -1060,8 +1060,54 @@ kontrolleri ve dosya paylaşımı gibi özellikleri etkin bir biçimde kullanmay
 <li>envanter takip ve yönetimi
 sağlayacak yetkinlikleri ile kurumların Pardus göçünü kolaylaştırıp teşvik ederek
 yerli işletim sistemimizin yaygınlaştırılmasını ve milli ekonomiye büyük bir katma değer oluşturulmasını amaçlamaktadır. Projemizin yeteneklerinin
-yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli teknolojiler ve protokoller geliştirilmiştir.</li>
+yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli teknolojiler ve protokoller geliştirilmiştir.
+
+  <script defer src="/giys/js/mermaid.bundle.min.js"></script>
+  
+
+
+
+<pre class="gdoc-mermaid mermaid">
+sequenceDiagram
+    actor User
+    participant WebUI
+    participant TaskManager
+    participant AgentManager
+    participant MessageManager
+    participant RabbitMQ
+
+    User ->> WebUI: get_task_list()
+    WebUI ->> TaskManager : get_task_list()
+    TaskManager -->> WebUI: task_list
+    User ->> WebUI: get_agent_list()
+    WebUI ->> AgentManager : get_agent_list()
+    AgentManager -->> WebUI : agent_list
+
+    par 
+        User->>WebUI: select_task()
+    and 
+        User->>WebUI: select_agent()
+    and
+        User->>WebUI: select_task_type()
+    end
+    
+    WebUI ->> TaskManager : load_task(agent, task)
+    TaskManager ->> TaskManager: save_task(agent, task)
+    TaskManager ->> AgentManager: send_task_to_agent(agent, task)
+    AgentManager ->> MessageManager: send_task_message_to_message_broker(agent, task)
+    MessageManager ->> MessageManager : get_agent_queue(agent)
+    MessageManager ->> RabbitMQ :send_task_message_to_agent_queue(qgent_queue, task_message)
+    RabbitMQ -->> MessageManager : message_sent_result
+    MessageManager ->> MessageManager: create_event() listen_message_result_event
+    MessageManager -->> AgentManager :task_sent_result
+    AgentManager -->> TaskManager :task_sent_result
+    TaskManager ->> TaskManager :listen_task_result_event 
+    TaskManager ->> WebUI: task_result
+
+</pre>
+</li>
 </ul>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <p><strong>Yenilikçi Yönleri</strong></p>
 <ul>
 <li>Sistemimizde geliştirilen ve benzer kontrol ve yönetim sistemleri ile kıyaslandığında yenilikçi olan özellikler şunlardır:</li>
@@ -1095,9 +1141,6 @@ yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli t
 <li>Sistem izleme</li>
 </ul>
 
-  <script defer src="/giys/js/mermaid.bundle.min.js"></script>
-  
-
 
 
 <pre class="gdoc-mermaid mermaid">
@@ -1122,7 +1165,7 @@ sequenceDiagram
 
 </pre>
 
-
+ <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   </article>
 
           
