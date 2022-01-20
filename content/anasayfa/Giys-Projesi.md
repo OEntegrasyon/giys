@@ -47,7 +47,7 @@ yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli t
 - Hata Takip modülü
 - Kimlik doğrulamada mobil uygulama kullanımı
 
-![Kullanıcı Ayarları](/server/OTP.gif#center-picture)
+![Kullanıcı Ayarları](/giys/server/OTP.gif#center-picture)
 
 - Sisteme ilk kaydın ajan üzerinden otomatik gerçekleşmesi
 - Güvenli mesajlaşma sistemi
@@ -58,6 +58,7 @@ yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli t
 
 
 {{<mermaid align="left">}}
+
 
 sequenceDiagram
     participant GIYSMessageListener
@@ -75,4 +76,5 @@ sequenceDiagram
     MessageManager -->> MessageParser: task_result_sent
     MessageManager ->>  RabbitMQ : publish_message(message)
     RabbitMQ -->>  MessageManager : message_sent_result
+
 {{< /mermaid >}}

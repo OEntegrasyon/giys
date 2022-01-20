@@ -8,9 +8,9 @@ date: 2022-01-19T10:53:40+03:00
 Eklenecek yeni bir kural, kural ekleme butonu ile gerçekleştirilir.
 
 
-![Paket Yükleme](/client/firewall-3.png#center-picture)
+![Paket Yükleme](/giys/client/firewall-3.png#center-picture)
 
-![Paket Yükleme](/client/firewall-2.png#center-picture)
+![Paket Yükleme](/giys/client/firewall-2.png#center-picture)
 
- ![Paket Yükleme](/client/firewall.png#center-picture)
+ ![Paket Yükleme](/giys/client/firewall.png#center-picture)
 

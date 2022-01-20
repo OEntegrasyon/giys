@@ -8,4 +8,4 @@ Yüklenmek istenen paket ismi sisteme girildikten sonra, paket mevcut ise  yükl
 Yüklü olan paketler tablo üzerinde görüntülenir ve  kaldırma işlemi bu tablo üzerinden gerçekleştirilir.
 
 
- ![Paket Yükleme](/client/package-install.gif#center-picture)
+ ![Paket Yükleme](/giys/client/package-install.gif#center-picture)

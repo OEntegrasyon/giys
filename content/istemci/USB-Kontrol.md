@@ -12,4 +12,4 @@ date: 2022-01-19T11:01:14+03:00
 donanımları istemci üzerinden  engellenir veya engel kaldırılmaktadır.
 
 
- ![Paket Yükleme](/client/usb.gif#center-picture)
+ ![Paket Yükleme](/giys/client/usb.gif#center-picture)

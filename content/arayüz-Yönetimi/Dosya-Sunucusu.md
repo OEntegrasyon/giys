@@ -17,4 +17,4 @@ Eklenen dosya sunucuları;
 
 GİYS yapısı gereği sadece istemciler değil istemcilerin ihtiyaç duyduğu sunucuların yönetiminide gerçekleştirmektedir.
 
-![Dosya Sunucusu Ekleme](/server/file-server.png)
+![Dosya Sunucusu Ekleme](/giys/server/file-server.png)

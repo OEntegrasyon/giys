@@ -8,7 +8,7 @@ Oluşturulan bir kullanıcı admin yetkisine sahip ise tüm kullanıcıların pa
 Yetki sahibi olmayan kullanıcılar sadece kendi sayfalarını görüntüleyebilmektedir.
 Kullanıcılar bu sayfadan şifrelerini ve kişisel bilgilerini güncelleyebilirler.
 
-![Kullanıcı Ayarları](/server/ayarlar.png)
+![Kullanıcı Ayarları](/giys/server/ayarlar.png)
 
 Oluşturulan kullanıcıların  yetki alanları sayfa  üzerinde bulunan tablolar halinde görülmektedir.
 Admin yetkili kullanıcı  yetki ayarlamalarını kullanıcı sayfaları üzerinden değiştirebilmektedir.
