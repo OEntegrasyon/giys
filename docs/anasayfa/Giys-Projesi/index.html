@@ -1082,7 +1082,7 @@ yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli t
 <li>Kimlik doğrulamada mobil uygulama kullanımı</li>
 </ul>
 <p><img
-  src="/server/OTP.gif#center-picture"
+  src="/giys/server/OTP.gif#center-picture"
   alt="Kullanıcı Ayarları"
   
 /></p>
@@ -1102,6 +1102,7 @@ yanı sıra kurumlardaki işlemlerin güvenli olarak yapılması için gerekli t
 
 <pre class="gdoc-mermaid mermaid">
 
+
 sequenceDiagram
     participant GIYSMessageListener
     participant MessageEventListener
@@ -1118,6 +1119,7 @@ sequenceDiagram
     MessageManager -->> MessageParser: task_result_sent
     MessageManager ->>  RabbitMQ : publish_message(message)
     RabbitMQ -->>  MessageManager : message_sent_result
+
 </pre>
 
 
